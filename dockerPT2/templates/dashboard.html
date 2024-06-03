@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dashboard.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/scanner" class="nav-link">Scanner</a></li>
+            <li><a href="/manual" class="nav-link">OSINT Tools</a></li>
+        </ul>
+    </nav>
+    <div id="content-wrapper">
+        <img src="https://res.cloudinary.com/ikuu/image/upload/c_fill,dpr_auto,f_auto,g_auto:subject,q_auto,w_250/v1/triplep/Triple_P_Logo_cmyk_TEST_01_6a73d3d86f" alt="Triple P" id="triple-p-logo">
+        <button type="button" onclick="confirmReset()" class="reset-btn">Reset and Start Over</button>
+
+        <form name="domainForm" class="form-container" onsubmit="return false;">
+            <input type="text" id="domain-input" name="domain_name" placeholder="Enter Domain Name (example.com)"  title="Please enter a valid domain name, e.g., example.com" class="input-text">
+            <input type="text" id="domain-input-org" name="domain_name_org" placeholder="Enter Company Name for checkbox 8 (Example X)"  title="Please enter a valid company name, e.g., Example" class="input-text">
+            <input type="number" id="domain-page" name="domain_page" placeholder="Enter page number for checkbox 8, (1 = 10 names)" min="1" class="input-text" title="Please enter a valid number, e.g., 2">
+            
+            <button id="selectAll">Select All</button>
+            <div class="checkbox-grid">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="checkbox-host" name="checkbox1">
+                    <label for="checkbox-host">1. Run for DNS records</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="checkbox-shcheck" name="checkbox6">
+                    <label for="checkbox-shcheck">6. Run security-headers check</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="checkbox-ssl" name="checkbox10">
+                    <label for="checkbox-ssl">10. Run for SSL cert check</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="checkbox-ws_office" name="checkbox2">
+                    <label for="checkbox-ws_office">2. Run for Workspace & o365 usage check</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="checkbox-wpscan" name="checkbox7">
+                    <label for="checkbox-wpscan">7. Run WordPress scan (Active)</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="checkbox-tls" name="checkbox11">
+                    <label for="checkbox-tls">11. Run for SSL/TLS check</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="checkbox-whois" name="checkbox3">
+                    <label for="checkbox-whois">3. Run for whois details</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="checkbox-username" name="checkbox8">
+                    <label for="checkbox-username">8. Run for Name and title (Passive)</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="checkbox-port" name="checkbox12">
+                    <label for="checkbox-port">12. Run for open Ports (Active)</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="checkbox-subscraper" name="checkbox4">
+                    <label for="checkbox-subscraper">4. Run for subdomains</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="checkbox-email" name="checkbox9">
+                    <label for="checkbox-email">9. Run for emails and format (Passive)</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="checkbox-hping" name="checkbox13">
+                    <label for="checkbox-hping">13. Run for System uptime</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="checkbox-wafw00f" name="checkbox5">
+                    <label for="checkbox-wafw00f">5. Run 'WAF' check</label>
+                </div>
+
+            </div>
+            <button type="button" id="run-button" class="submit-btn">Run</button>
+        </form>
+
+        <br><div id="loading-indicator" style="display: none;"></div>
+        <div id="output-container"></div>
+    </div>
+    <footer id="sticky-footer">
+        &copy; ey06ubjk
+    </footer>
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>
