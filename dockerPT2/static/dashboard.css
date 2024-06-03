@@ -1,0 +1,420 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    padding-bottom: 70px; /* Height of the footer */
+    background-color: #f4f4f4;
+}
+
+/* ---------------------------------------------------------------- Styles for the navigation bar */
+nav {
+    background-color: #333;
+    border: 1px solid gray;
+    border-radius: 8px;
+    right: 200px;
+    left: 1100px;
+    top: 29px;
+    justify-content: start; 
+    padding: 2x 5px; 
+    position: flex; 
+}
+
+nav ul {
+    list-style-type: none; 
+    display: flex;
+    gap: 100px;
+}
+
+nav ul li a {
+    color: white; 
+    border-radius: 5px;
+    text-decoration: none; 
+    padding: 10px 30px; 
+    transition: background-color 0.15s; 
+}
+
+nav ul li a:hover {
+    background-color: #848484; 
+    border-radius: 10px;
+}
+
+.nav-link.active {
+    color: white; 
+    background-color: #848484;
+    border-radius: 5px;
+}
+/* ---------------------------------end----------------------------------------------- */
+
+#triple-p-logo {
+    position: absolute; 
+    top: 67px; 
+    right: 22px; 
+    max-height: 100px;
+    max-width: 200px; 
+}
+
+/*-------------------------------------------------------- For Checkboxes */ 
+.checkbox-grid {
+    padding: 5px;
+}
+
+.checkbox-item input[type="checkbox"] {
+    display: none; /* Hide the default checkbox */
+}
+
+.checkbox-item label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 24px;
+    color: #333; /* Dark grey text for better readability */
+}
+
+.checkbox-item label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #333; /* Dark border for checkbox */
+    border-radius: 3px; /* Slightly rounded corners for the checkbox */
+    background-color: #fff; /* White background for checkbox */
+}
+
+.checkbox-item input[type="checkbox"]:checked + label:before {
+    background-color: #f3f2f2; /* Dark background for checked state */
+}
+
+.checkbox-item input[type="checkbox"]:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-item label:hover:before {
+    background-color: #f3f2f2; /* Dark background for checked state */
+}
+/*---------------------------------------end-------------------------------------------*/
+
+/*-----------------------------------------------------------------------------Select all checkbox */
+#selectAll {
+    background-color: white; 
+    color: black; 
+    border: 1px solid #505050; 
+    padding: 4px 15px; 
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.1s;
+}
+
+#selectAll:hover {
+    background-color: #f3f2f2; 
+}
+/*---------------------------------------end-------------------------------------------*/
+
+label {
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 0.3em 0;
+}
+
+#sticky-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px; /* Set the height of your footer */
+    background-color: #f0f0f0; /* Footer background color */
+    color: rgb(100, 100, 100); /* Footer text color */
+    text-align: right; /* Center the text */
+    padding: 11px 20px; /* Padding for the text */
+    box-sizing: border-box;
+    box-shadow: 0px 4px 15px gray; /* Soft shadow for depth */
+}
+
+.checkbox-grid {
+    left: 570px;
+    top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number 2 for more columns */
+    gap: 1px; /* Space between grid items */
+    position: static;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* Removed display flex and align-items center */
+}
+
+.input-text {
+    width: 35%; /* Adjust the width as needed to leave space on the right */
+    padding: 10px 18px;
+    margin: 8px 0;
+    margin-top: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 15px;
+    display: block; /* Makes sure the input fields stack under each other */
+}
+
+
+.input-text:focus {
+    outline: none; /* Remove focus outline */
+    border-color: #007bff; /* Highlight color when focused */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1), 0 0 8px rgba(0,123,255,0.6); /* More pronounced shadow when focused */
+}
+
+/* Styling for the "Run" button */
+.submit-btn {
+    background-color: #8d8d8d; /* Green */
+    color: white;
+    padding: 10px 15px;
+    margin: 16px 0;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for interaction */
+}
+
+.submit-btn:hover {
+    background-color: #333; /* Darker on hover */
+    transform: translateY(-1px); /* Slight lift effect */
+}
+
+.submit-btn:active {
+    background-color: #2b2b2b; /* Even darker on press */
+    transform: translateY(1px); /* Pressed effect */
+}
+
+
+.reset-btn {
+    background-color: #00940a; /* Bright red for visibility */
+    color: white; /* White text for contrast */
+    border: none;
+    padding: 15px 30px; /* Larger padding for a bigger button */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px; /* Larger font size for readability */
+    margin: 20px 0; /* Add some margin around the button */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for interaction */
+}
+
+.reset-btn:hover {
+    background-color: #007006; /* Slightly darker red on hover */
+    transform: translateY(-2px); /* Small lift effect */
+}
+
+.reset-btn:active {
+    transform: translateY(1px); /* Pressed effect */
+}
+
+.output-container {
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.output-container pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+.btn {
+    background-color: #00940a; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for background color and transform */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.btn:hover {
+    background-color: #007006; /* Darker shade of green */
+    transform: scale(1.05); /* Slightly increase size */
+}
+
+.btn:active {
+    transform: scale(0.95); /* Slightly decrease size when clicked */
+}
+
+/* ----------------------------------------------------------------------------- FROM HERE IT IS FOR MANUAL.HTML*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#section-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.grid-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+  background-color: #ffffff; /* Changed to fit your site's theme */
+  border: 1px solid #bababa;
+  border-radius: 6px;
+  margin-bottom: 10px; /* Space between accordions */
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease; /* Smooth transition for background color and transform */
+}
+
+.section a {
+    background-color: #a0a0a0; 
+    color: white; 
+    font-size: 15px;
+    margin-top: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px; 
+    display: inline-block; 
+    transition: background-color 0.3s; 
+}
+
+.section a:hover {
+    background-color: #888888; 
+}
+
+.toggle {
+  font-weight: 700;
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  padding: 12px;
+}
+
+.toggle.active {
+    background-color: #e4e4e4; /* Darker shade for active state */
+}
+
+.content-hidden {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease-out; /* Transition for smooth expanding and collapsing */
+    font-size: 15px;
+    padding-inline: 14px;
+    background-color: #fdfdfd;
+    border-radius: 0 0 4px 4px;
+}
+
+.section:hover {
+  background-color: #e4e4e4; /* Darker shade of green */
+  transition: background-color 0.05s;
+
+}
+
+h2 {
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+hr {
+    border: 0;
+    border-radius: 3px;
+    height: 3px;
+    background: #333; 
+    margin-top: 25px; 
+    margin-bottom: 1px; 
+}
+
+p {
+  color: #393939;
+  line-height: 1.4;
+}
+
+.intro-text {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 20px auto;
+    max-width: 1005px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 1px 5px 2px rgba(0,0,0,0.1);
+}
+/*-----------------------------------------------end-----------------------------------------------------------*/
+
+/* FOR README.HTML*/
+.intro-text-rm {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 20px auto;
+    max-width: 850px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 1px 5px 2px rgba(0,0,0,0.1);
+}
