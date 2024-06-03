@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Readme</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dashboard.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/scanner" class="nav-link">Scanner</a></li>
+            <li><a href="/manual" class="nav-link">OSINT Tools</a></li>
+        </ul>
+    </nav>
+    <div id="content-wrapper">
+        <img src="https://res.cloudinary.com/ikuu/image/upload/c_fill,dpr_auto,f_auto,g_auto:subject,q_auto,w_250/v1/triplep/Triple_P_Logo_cmyk_TEST_01_6a73d3d86f" alt="Triple P" id="triple-p-logo">
+        <button type="button" onclick="confirmGithub()" class="reset-btn">Continue to Github</button>
+        <button type="button" onclick="confirmMitre()" class="reset-btn">Continue to MITRE ATT&CK</button>
+
+        <form name="domainForm" class="form-container">
+            <h2 style="text-align:center">Semi-Automated OSINT</h2>
+                
+            <p class="intro-text-rm" style="text-align: left;"><small>De tool die is ontwikkeld, is bedoeld om OSINT te automatiseren die inspiratie haalt uit MITRE ATT&CK
+                -> https://attack.mitre.org/tactics/TA0043/. De 10 reconnaissance technieken van MITRE:  
+
+                <br><br>1.<b> T1595 Active Scanning:</b> Using techniques like port scanning and network mapping to identify active devices and services.
+                <br>2.<b> T1592 Gather Victim Host Information:</b> Collecting details about a victim's systems, such as operating systems and installed software.
+                <br>3.<b> T1589 Gather Victim Identity Information:</b> Obtaining personal identifying information of individuals associated with a target organization.
+                <br>4.<b> T1590 Gather Victim Network Information:</b> Gathering data on a victim's network configurations, connections, and infrastructure.
+                <br>5.<b> T1591 Gather Victim Org Information:</b> Acquiring information about the target organization, such as roles, relationships, and affiliations.
+                <br>6.<b> T1598 Phishing for Information:</b> Using deceptive emails or communications to elicit sensitive information.
+                <br>7.<b> T1597 Search Closed Sources:</b> Searching through non-public databases or forums for information.
+                <br>8.<b> T1596 Search Open Technical Databases:</b> Looking up technical data like certificates and network infrastructure in public databases.
+                <br>9.<b> T1593 Search Open Websites/Domains:</b> Researching information available on public websites or domain registries.
+                <br>10.<b> T1594 Search Victim-Owned Websites:</b> Investigating websites owned by the target for exploitable information.
+                
+                <br><br>De helft van deze methoden is digitaal. Daarom zijn alleen de digitale technieken 1, 3, 4, 8 en 9 in aanmerking genomen voor het product. Deze 
+                methoden worden gecategoriseerd als passieve of actieve reconnanssaince, afhankelijk van het type informatie dat we verzamelen en hoe we betrokken 
+                zijn bij de digitale infrastructuur van de target. Deze methoden kunnen natuurlijk ook worden gebruikt voor red teaming. 
+
+                <br><br>Omdat OSINT altijd menselijke input vereist, kan het nooit volledig worden automatiseerd. Maar het gebruik van dit product kan bepaalde 
+                processen versnellen. Om het beste resultaat van deze tool te krijgen, moet u de volgende stappen volgen:
+
+
+                <br><br>1. Het gebruik maken van de Scanner.
+                <br>2. Het grondig doornemen van de OSINT Tools.
+                <br>3. Handmatig zoeken naar overige informatie volgens MITRE.
+
+            </small>
+            </p>
+            
+            <!-- Your input fields here -->
+        </form>
+    </div>
+    <footer id="sticky-footer">
+        &copy; ey06ubjk
+    </footer>
+    <script src="{{ url_for('static', filename='readme.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manual</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dashboard.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/scanner" class="nav-link">Scanner</a></li>
+            <li><a href="/manual" class="nav-link">OSINT Tools</a></li>
+        </ul>
+    </nav>
+    <div id="content-wrapper">
+        <img src="https://res.cloudinary.com/ikuu/image/upload/c_fill,dpr_auto,f_auto,g_auto:subject,q_auto,w_250/v1/triplep/Triple_P_Logo_cmyk_TEST_01_6a73d3d86f" alt="Triple P" id="triple-p-logo">
+        <button type="button" onclick="confirmGithub()" class="reset-btn">Continue to Github</button>
+        
+        <form name="domainForm" class="form-container">
+            <h3 style="text-align:center">OSINT Tools</h3>
+            <p class="intro-text" style="text-align: center;">Na het scannen van de domein, is het belangrijk om handmatig op zoektocht te gaan voor meer 'persoonlijke' informatie. Dit kan passief 
+                <br>als actief gedaan worden. Hieronder zijn enkele online tools benoemd die hierbij kunnen helpen. Daarnaast is het, indien mogelijk, 
+                <br>aangeraden om actief te scannen naar poorten, versies, software en verborgen directories (Dirbuster, Gobuster, etc...). Succes!</p>
+                <hr><br>
+
+                <div id="section-grid">
+                    <div id="grid-left" class="grid-column">
+                        <!-- Grid Left -->
+                        <div class="section">
+                            <div class="toggle">Osintframework.com</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Een uitgebreide verzameling van hulpmiddelen, bronnen en technieken voor het uitvoeren van Open Source Intelligence (OSINT)-onderzoeken,
+                                        die helpen bij het verzamelen en analyseren van openbaar beschikbare informatie voor verschillende doeleinden. 
+                                        <br><a href="https://osintframework.com/" target="_blank">https://osintframework.com/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Snov.io (Free plan)</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Snov.io is een hulpmiddel voor het ontdekken en verifiëren van e-mails voor een domein, 
+                                        handig in OSINT voor het verzamelen van contactinformatie gekoppeld aan organisaties of personen. 
+                                        <br><a href="https://snov.io/" target="_blank">https://snov.io/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Dehashed (Paid)</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Dehashed.com biedt een doorzoekbare database van gelekte referenties, waardevol in OSINT voor het onderzoeken van 
+                                        inbreuken op gegevens en beveiligingsproblemen die zijn gekoppeld aan specifieke accounts of domeinen. Ook is het 
+                                        mogelijk om een reeks van emails adressen te zien met gelekte wachtwoorden. 
+                                        <br><a href="https://dehashed.com/" target="_blank">https://dehashed.com/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Dnsdumpster.com</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Dnsdumpster.com is een tool voor domeinonderzoek die uitgebreide DNS-gegevens biedt, inclusief hostrecords, 
+                                        subdomeinen en MX-records, die nuttig zijn voor het in kaart brengen van de internetvoetafdruk van een domein. 
+                                        <br><a href="https://dnsdumpster.com/" target="_blank">https://dnsdumpster.com/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Iknowwhatyoudownload.com</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Iknowwhatyoudownload.com volgt en toont torrentdownloads die zijn gekoppeld aan specifieke IP-adressen, 
+                                        handig in OSINT voor het identificeren van mogelijk gedownloade inhoud van het netwerk van een doelwit. 
+                                        <br><a href="https://iknowwhatyoudownload.com/en/peer/" target="_blank">https://iknowwhatyoudownload.com/en/peer/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Viewdns.info</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>ViewDNS.info biedt een verscheidenheid aan DNS- en netwerkhulpmiddelen, zoals reverse DNS en IP-geschiedenis en 
+                                        meer die nuttig zijn in OSINT voor het volgen van domeinwijzigingen en het ontdekken van verbonden domeinen. 
+                                        <br><a href="https://viewdns.info/" target="_blank">https://viewdns.info/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Netcraft.com</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Een service voor het analyseren van en rapporteren over de infrastructuur, hosting en technologiestack van websites, 
+                                        die helpt bij het begrijpen van website-eigendom, hostingdetails en potentiële beveiligingskwetsbaarheden tijdens OSINT-onderzoeken. 
+                                        <br><a href="https://sitereport.netcraft.com/" target="_blank">https://sitereport.netcraft.com/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Ipinfo.io</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Ipinfo.io biedt gedetailleerde informatie over IP-adressen, inclusief geolocatie, ISP en hostinggegevens, 
+                                        nuttig in OSINT voor het lokaliseren van de fysieke locatie en netwerkkenmerken van een doelwit. 
+                                        <br><a href="https://ipinfo.io/" target="_blank">https://ipinfo.io/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">HaveIBeenPwned</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>“Have I Been Pwned” is een website waarmee gebruikers kunnen controleren of hun e-mailadressen in gevaar zijn gekomen bij datalekken. 
+                                        Het geeft informatie of persoonlijke gegevens zijn blootgesteld en helpt bij het bewaken en 
+                                        beveiligen van accounts tegen ongeautoriseerd gebruik.
+                                        <br><a href="https://haveibeenpwned.com/" target="_blank">https://haveibeenpwned.com/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="grid-center" class="grid-column">
+                        <!-- Grid Center -->
+                        <div class="section">
+                            <div class="toggle">Web.archive.org</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Web.archive.org (de Wayback Machine) stelt gebruikers in staat om gearchiveerde versies van webpagina's te bekijken, 
+                                        handig in OSINT voor onderzoek naar historische website-inhoud en veranderingen in de tijd. 
+                                        <br><a href="https://web.archive.org/" target="_blank">https://web.archive.org/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Ping.eu</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Ping.eu biedt een set netwerkgereedschappen zoals ping, traceroute en DNS lookup, die nuttig zijn in OSINT 
+                                        voor het controleren van de toegankelijkheid en routering van internetbronnen met betrekking tot een doelwit. 
+                                        <br><a href="https://ping.eu/" target="_blank">https://ping.eu/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Shodan.io</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Shodan.io is een zoekmachine voor met het internet verbonden apparaten, die gegevens verschaft over open poorten, 
+                                        services en apparaten online, nuttig in OSINT voor het ontdekken van blootgestelde netwerkmiddelen en kwetsbaarheden. 
+                                        <br><a href="https://www.shodan.io" target="_blank">https://www.shodan.io</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Search.censys.io</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Search.censys.io is een zoekmachine die informatie over apparaten, websites en certificaten indexeert, 
+                                        handig in OSINT voor het blootleggen van details over netwerkinfrastructuur en beveiligingsconfiguraties. 
+                                        <br><a href="https://search.censys.io/" target="_blank">https://search.censys.io/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Webmii</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Webmii.com is een zoektool die informatie verzamelt van verschillende online bronnen over personen of bedrijven, 
+                                        nuttig in OSINT voor het opbouwen van profielen op basis van publieke aanwezigheid op het web. 
+                                        <br><a href="https://webmii.com/" target="_blank">https://webmii.com/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">RIPE Database</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>RIPE Database biedt gedetailleerde registratiegegevens over IP-adressen en ASN's in Europa en omliggende gebieden, 
+                                        nuttig in OSINT voor het identificeren van netwerkeigenaars, connectiviteit en gerelateerde infrastructuur. 
+                                        <br><a href="https://apps.db.ripe.net/db-web-ui/fulltextsearch" target="_blank">https://apps.db.ripe.net/db-web-ui/fulltextsearch</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Myip.ms</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Myip.ms biedt gedetailleerde informatie over IP-adressen, inclusief eigendom, hostinggegevens en bezoekersstatistieken, 
+                                        nuttig in OSINT voor het traceren van IP-toewijzingen en bijbehorende webactiviteit. 
+                                        <br><a href="https://myip.ms/" target="_blank">https://myip.ms/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Urlscan.io</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Urlscan.io is een service die websites scant en analyseert om kwaadaardige activiteit te identificeren en screenshots, 
+                                        hostinginformatie en verbindingsdetails levert, handig in OSINT voor het onderzoeken van verdachte URL's. 
+                                        <br><a href="https://urlscan.io/" target="_blank">https://urlscan.io/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Host.io</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Host.io biedt gedetailleerde domeinnaamgegevens voor verschillende toepassingen, waaronder cyberbeveiliging, 
+                                        marktonderzoek en concurrentieanalyse. Het biedt uitgebreide informatie over domeinen, inclusief DNS-gegevens, 
+                                        backlinks en hostinggegevens, waarbij gebruik wordt gemaakt van een API die is gebouwd voor hoge prestaties en nauwkeurigheid.
+                                        <br><a href="https://host.io/" target="_blank">https://host.io/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="grid-right" class="grid-column">
+                        <!-- Grid Right -->
+                        <div class="section">
+                            <div class="toggle">Start.me</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Start.me is een aanpasbare startpaginatool waarmee gebruikers hun favoriete links en bladwijzers efficiënt 
+                                        kunnen organiseren en openen, handig in OSINT voor het beheren en snel openen van verschillende webbronnen 
+                                        en tools tijdens onderzoeken. 
+                                        <br>Bijvoorbeeld: <a href="https://start.me/p/L1rEYQ/osint4all/" target="_blank">https://start.me/p/L1rEYQ/osint4all/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Cachedview</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Cachedview.nl biedt toegang tot cacheversies van webpagina's, handig in OSINT voor het bekijken van inhoud 
+                                        die is verwijderd of gewijzigd, maar nog steeds beschikbaar is via cachebronnen. 
+                                        <br><a href="https://cachedview.nl/" target="_blank">https://cachedview.nl/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Smallseotools</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Analyseer het backlinkprofiel van elke website om de SEO-prestaties en het 
+                                        concurrentielandschap te beoordelen tijdens OSINT-onderzoeken. 
+                                        <br><a href="https://smallseotools.com/backlink-checker/" target="_blank">https://smallseotools.com/backlink-checker/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Zoomeye</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Een zoekmachine voor het ontdekken van op internet aangesloten apparaten, diensten en websites, 
+                                        handig voor het verzamelen van informatie over potentiële doelwitten tijdens OSINT-operaties. 
+                                        <br><a href="https://www.zoomeye.hk/" target="_blank">https://www.zoomeye.hk/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Redirectdetective</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Een hulpprogramma om de volledige omleidingsketen van een URL bloot te leggen, inzicht te geven 
+                                        in omleidingspaden van websites, handig voor het traceren van informatiestromen en het identificeren 
+                                        van potentiële beveiligingsrisico's tijdens OSINT-onderzoeken. 
+                                        <br><a href="https://redirectdetective.com/" target="_blank">https://redirectdetective.com/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">WIGLE.net</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Een platform voor het in kaart brengen en analyseren van draadloze netwerken wereldwijd, waarmee gebruikers
+                                        Wi-Fi-netwerken en hun locaties kunnen ontdekken en visualiseren, handig voor het geolocaliseren van 
+                                        apparaten en het begrijpen van de draadloze infrastructuur in een bepaald gebied tijdens OSINT-operaties. 
+                                        <br><a href="https://www.wigle.net/" target="_blank">https://www.wigle.net/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">VirusTotal</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Een platform voor het scannen van bestanden en URL's op virussen en andere malware, 
+                                        waarmee gebruikers de veiligheid van bestanden kunnen controleren en potentieel 
+                                        schadelijke inhoud kunnen identificeren tijdens OSINT-onderzoeken. 
+                                        <br><a href="https://www.virustotal.com/gui/home/search" target="_blank">https://www.virustotal.com/gui/home/search</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Epieos</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Epieos is een OSINT-tool gericht op het zoeken en verifiëren van e-mail. Het kan worden gebruikt om informatie te extraheren uit e-mailadressen, 
+                                        inclusief potentiële datalekken, gerelateerde accounts en gekoppelde diensten, wat helpt bij onderzoeks- en cyberbeveiligingsinspanningen.
+                                        <br><a href="https://epieos.com/" target="_blank">https://epieos.com/</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="toggle">Drimble.nl</div>
+                            <div class="content-hidden">
+                                <div>
+                                    <p>Drimble.nl heeft informatie over Nederlandse bedrijven zoals contactgegevens en informatie over hun activiteiten. Voor OSINT is het handig 
+                                        vanwege de toegang tot actuele en historische bedrijfsgegevens, wat nuttig is voor marktonderzoek en concurrentieanalyse.
+                                        <br><a href="https://drimble.nl/bedrijf" target="_blank">https://drimble.nl/bedrijf</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </form>
+    </div>
+    <footer id="sticky-footer">
+        &copy; ey06ubjk
+    </footer>
+    <script src="{{ url_for('static', filename='manual.js') }}"></script>   
+</body>
+</html>
