@@ -1,0 +1,13 @@
+Flask
+requests
+certifi
+charset-normalizer
+idna
+urllib3
+Flask-Talisman
+taser
+ipparser
+python-whois
+pyopenssl
+python-dotenv
+python-nmap
