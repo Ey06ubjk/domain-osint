@@ -6,7 +6,7 @@ because the other 5 techniques are part of a physical recon, which cannot be aut
 To run the docker-container, it only needs the next prompts;
 
 ```
-cd dockerPOC
+cd dockerPT2
 ```
 ```
 docker-compose up --build
